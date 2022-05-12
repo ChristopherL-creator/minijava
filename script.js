@@ -9,7 +9,25 @@
 
 //*  1) leggere file: 
 
-const fs = require('fs');
+const fs = require('fs'); 
+//  richiamo con file sistem;
+const myArgs = process.argv.slice(2); 
+//  uso slice per 
+if (myArgs[0] === undefined) { 
+  console.console.error('mi serve file input'); 
+  process.exit();
+} 
+
+const inputUrl = myArgs[0]; 
+
+let outputUrl; 
+
+if (myArgs[1] === undefined) {
+  outputUrl = './output.json'; //default se non trovassi myArgs[1]
+} else { 
+  outputUrl = myArgs[1];
+} 
+
 //*  richiedo un modulo fs(file system) per leggere e modificare 
 //*  file system;
 //*  cerca file in indirizzo, gli da formato utf8, e lo mette in 
@@ -48,10 +66,10 @@ const fs = require('fs');
 let data; 
 
 try {
-    const data = fs.readFileSync('./libri.csv', 'utf8'); 
-    console.log(data);
+    data = fs.readFileSync(inputUrl, 'utf8'); 
 } catch (err) {
-    console.log('file not found');
+    console.log('file not found'); 
+    process.exit();
   } 
 
 //* let pippo = { 
@@ -70,29 +88,86 @@ try {
 
 //*  a)  spezzare stringa con array di linee; 
 //*      let lines = ['title, author, price, copies', 'iliade, omero, 15.00, 5', 'odissea, omero, 12.00, 3', 'i promessi sposi, manzoni, 20.00, 10']; 
+
+let lines= data.split(/\r?\n/); 
+lines = lines.filter(line => line!== '')
+
 //*  b)  creo variabile chiamata properties, che conterrà array 
 //*      con parole di cui è composta prima linea; 
-//*      const properties = ['title', 'author', 'price', 'copies']; 
+//*      const properties = ['title', 'author', 'price', 'copies'];  
+
+const properties = lines.shift().split(','); 
+
+// console.log('lines + properties', lines, properties); 
+
 //*      let lines = ['iliade, omero, 15.00, 5', 'odissea, omero, 12.00, 3', 'i promessi sposi, manzoni, 20.00, 10']; 
 //*  se splitto lungo virgole, ottengo array con parole; 
-//*  c)  creo array vuoto per gli oggetti;
+//*  c)  creo array vuoto per gli oggetti; 
+const objectsArray = []; 
+
 //*  d)  ciclo su tutte le linee dentro lines; 
+for ( const line of lines) { 
+
 //*      creo nuovo oggetto vuoto; 
+  const obj = {};
+
 //*      trasformo linea in array di parole; 
 //*      const lineArray = ['iliade', 'omero', '15.00', '5'];
+  const lineArray = line.split(','); 
+  // console.log('lineArray', lineArray);
+
 //*      faccio ciclo interno per ogni parola dentro properties; 
+  for (let i = 0, i < properties.lenght, i ++) { 
+    const property = properties[i]; 
+    let property = properties[i]; 
+    let value = lineArray[i]; 
+
+    property = property.trim(); 
+    value = value.trim();  
+
+    value = checkType(value)
+
+    console.log('property', property);
+
 //*      aggiungo a nuovo oggetto proprietà con nome della proprietà, 
 //*      e associando valore corrispondente; 
+    obj[property] = value;    
+  } 
+
+//*      infilo oggetto in array vuoto; 
+  objectsArray.push(obj);
+}
+
 //*      prendo title con indice 0, dev'essere associato a oggetto 
 //*      vuoto indice 0 di line array; 
-//*      infilo oggetto in array vuoto; 
 //*  e)  console.log(array vuoto); 
 
 //* cerco properties, prima properry che mi arriva è properrty con primo elemento 
 
-const pippoJson = JSON.stringify(pippo);
+const jsonArray = JSON.stringify(objectsArray);
 
-console.log(pippoJson); 
+console.log('json array',jsonArray); 
 
 //* JSON 
-//* lo usa javascript per comunicare con altre piattaforme;
+//* lo usa javascript per comunicare con altre piattaforme; 
+
+try {
+  fs.writeFileSync(outputUrl, jsonArray);
+} catch (err) {
+  console.error('file not found'); 
+  process.exit();
+}
+
+//  controllo stringa:
+function checkType(value) { 
+//  controlla se è numero o meno:
+  if(!isNaN(value)) {  
+//  se value è numero, faccio parseFloat: 
+    return parseFloat(value);
+  } else if(value === 'true' || value === 'false'){ 
+           return value === 'true' ? true : false;
+         } else { 
+             return value;
+           }
+} 
+//  se numero, lo trasformo in float;
