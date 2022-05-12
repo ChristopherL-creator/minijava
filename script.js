@@ -12,9 +12,9 @@
 const fs = require('fs'); 
 //  richiamo con file sistem;
 const myArgs = process.argv.slice(2); 
-//  argv mi da array in console prima di lanciare, con parole separate da spazi. slice rimuove gli spazi da (2) ./libri, l'indice 0 di args 
+//  argv mi da array in console prima di lanciare, con parole separate da spazi. slice rimuove i primi (2) indici ./libri, l'indice 0 di args 
 if (myArgs[0] === undefined) { 
-  console.console.error('mi serve file input'); 
+  console.error('mi serve file input'); 
   process.exit();
 } 
 // sennò lo metto in inputUrl:
@@ -92,7 +92,7 @@ try {
 
 //  per creare un array di tante righe;
 let lines= data.split(/\r?\n/); 
-lines = lines.filter(line => line!== '')
+lines = lines.filter(line => line !== '')
 // per togliere stringa vuota
 //*  b)  creo variabile chiamata properties, che conterrà array 
 //*      con parole di cui è composta prima linea; 
@@ -120,8 +120,7 @@ for ( const line of lines) {
   // console.log('lineArray', lineArray);
 
 //*      faccio ciclo interno per ogni parola dentro properties; 
-  for (let i = 0, i < properties.lenght, i ++) { 
-    const property = properties[i]; 
+  for (let i = 0; i < properties.length; i ++) { 
     let property = properties[i]; 
     let value = lineArray[i]; 
 
@@ -129,8 +128,6 @@ for ( const line of lines) {
     value = value.trim();  
 
     value = checkType(value)
-
-    console.log('property', property);
 
 //*      aggiungo a nuovo oggetto proprietà con nome della proprietà, 
 //*      e associando valore corrispondente; 
@@ -163,14 +160,25 @@ try {
 
 //  controllo stringa:
 function checkType(value) { 
-//  controlla se è numero o meno:
-  if(!isNaN(value)) {  
-//  se value è numero, faccio parseFloat: 
+
+  const valueNonEUnNumero = isNaN(value); 
+  const valueEUnNumero = !valueNonEUnNumero; 
+
+  if (valueEUnNumero) {
     return parseFloat(value);
-  } else if(value === 'true' || value === 'false'){ 
-           return value === 'true' ? true : false;
-         } else { 
-             return value;
-           }
+  } else if (value === 'true' || value === 'false') {
+    return value === 'true' ? true : false;
+  } else {
+    return value;
+  }
+  // //  controlla se è numero o meno:
+//   if(!isNaN(value)) {  
+// //  se value è numero, faccio parseFloat: 
+//     return parseFloat(value);
+//   } else if(value === 'true' || value === 'false'){ 
+//            return value === 'true' ? true : false;
+//          } else { 
+//              return value;
+//            }
 } 
-//  se numero, lo trasformo in float; 
+// //  se numero, lo trasformo in float; 
