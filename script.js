@@ -12,12 +12,12 @@
 const fs = require('fs'); 
 //  richiamo con file sistem;
 const myArgs = process.argv.slice(2); 
-//  uso slice per 
+//  argv mi da array in console prima di lanciare, con parole separate da spazi. slice rimuove gli spazi da (2) ./libri, l'indice 0 di args 
 if (myArgs[0] === undefined) { 
   console.console.error('mi serve file input'); 
   process.exit();
 } 
-
+// sennò lo metto in inputUrl:
 const inputUrl = myArgs[0]; 
 
 let outputUrl; 
@@ -63,6 +63,7 @@ if (myArgs[1] === undefined) {
 //*    console.log('la funzione non funziona');
 //*} 
 
+//faccio leggere input
 let data; 
 
 try {
@@ -89,14 +90,16 @@ try {
 //*  a)  spezzare stringa con array di linee; 
 //*      let lines = ['title, author, price, copies', 'iliade, omero, 15.00, 5', 'odissea, omero, 12.00, 3', 'i promessi sposi, manzoni, 20.00, 10']; 
 
+//  per creare un array di tante righe;
 let lines= data.split(/\r?\n/); 
 lines = lines.filter(line => line!== '')
-
+// per togliere stringa vuota
 //*  b)  creo variabile chiamata properties, che conterrà array 
 //*      con parole di cui è composta prima linea; 
 //*      const properties = ['title', 'author', 'price', 'copies'];  
 
 const properties = lines.shift().split(','); 
+// properties diventa array
 
 // console.log('lines + properties', lines, properties); 
 
@@ -170,4 +173,4 @@ function checkType(value) {
              return value;
            }
 } 
-//  se numero, lo trasformo in float;
+//  se numero, lo trasformo in float; 
