@@ -1,3 +1,6 @@
+//  devo collegare sia script che input a debugger: 
+//  ...\minijava> node ./script.js ./libri.csv;
+
 //  console.log('ciao node!'); 
 
 //    per mostrare codice in prompt, usando 
