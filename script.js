@@ -17,7 +17,7 @@ const fs = require('fs');
 const myArgs = process.argv.slice(2); 
 //  argv mi da array in console prima di lanciare, con 
 //  parole separate da spazi. slice rimuove i primi (2) 
-//  indici ./libri, l'indice 0 di args 
+//  comandi ./libri, l'indice 0 di args 
 if (myArgs[0] === undefined) { 
   console.error('mi serve file input'); 
   process.exit();

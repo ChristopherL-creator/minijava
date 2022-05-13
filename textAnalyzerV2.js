@@ -1,40 +1,49 @@
+function getConsoleArguments() {
+    return process.argv.slice(2);
+} 
+
+function getArgumentOrExitWithErrorAndIndex(errorString, index) {
+//  2)  leggo argomenti inseriti da console; 
+    const arguments = getConsoleArguments();
+    let arg; 
+    if (arguments[index]) {
+        arg = arguments[index];
+    } else { 
+        console.error(errorString); 
+        process.exit;
+    } 
+    return arg;
+} 
+
+function getOptionalArgumentWithIndex(index) {
+    const arguments = getConsoleArguments(); 
+    return arguments[index];
+} 
+
+function readFileDataWithUrl(inputUrl) {
+    try { 
+        fileData = fs.readFileSync(inputUrl, 'utf-8');
+    } catch (error) { 
+        console.log('errore rilettura', error.message); 
+        process.exit;
+    }  
+    return fileData;
+}
 //  1)  importo file system (fs); 
 const fs = require('fs'); 
-
-//  2)  leggo argomenti inseriti da console; 
-const args = process.argv.slice(2);
 
 //  3)  prendo il primo elemento come inputUrl(obbligatorio) e il 
 //      secondo come outputUrl obbligatorio); parola da cercare ) 
 //      non obbligatorio;
-let inputUrl; 
-if (args[0]) {
-    inputUrl = args [0];
-} else { 
-    console.log(("inserire input url")); 
-    process.exit();
-} 
+const inputUrl = getArgumentOrExitWithErrorAndIndex("inserire input url", 0);
 
-let outputUrl; 
-if (args[1]) {
-    outputUrl = args [1];
-} else { 
-    console.log(("inserire output url")); 
-    process.exit();
-} 
+const outputUrl = getArgumentOrExitWithErrorAndIndex("inserire output url", 1);
 
-let searchWord = args[2]; 
+let searchWord = getOptionalArgumentWithIndex(2); 
 
 //  4)  leggo contenuto file e loggo il numero di caratteri spazi 
 //      compresi, e numero di caratteri spazi esclusi; 
-let fileData; 
-try { 
-    fileData = fs.readFileSync(inputUrl, 'utf-8');
-} catch (error) { 
-    console.log('errore rilettura', error.message); 
-    process.exit;
-} 
-
+let fileData = readFileDataWithUrl(inputUrl);
 console.log('testo da analizzare: ', fileData); 
 
 //  numero di caratteri: 12; 
