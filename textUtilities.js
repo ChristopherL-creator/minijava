@@ -13,7 +13,7 @@ function cleanString(string) {
                                 .replaceAll('.', '') 
                                 .replaceAll(',', '') 
                                 .replaceAll('!', '') 
-                                .replaceAll('\n', '') 
+                                .replaceAll('\n', ' ') 
                                 .replaceAll('\r', ''); 
     return cleanedString;
 } 
