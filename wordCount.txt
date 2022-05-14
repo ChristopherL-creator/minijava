@@ -1,0 +1,7 @@
+viva il css!
+
+numero caratteri: 12
+numero di caratter spazi esclusi: 10
+numero di parole: 3
+
+"viva il css!"

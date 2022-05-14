@@ -42,10 +42,13 @@ if (occurrence >= 0) {
     console.log('parola: ' +  searchWord + '; numero occorrenze: ' + occurrence + (occurrence === 1 ? ' volta.' : ' volte.')); 
 } 
 
-const countOccurrenciesOfEachWord = textUtilities.countOccurrenciesOfEachWord(fileData);
+const countOccurrenciesOfEachWord = textUtilities.countOccurrenciesOfEachWord(fileData); 
+console.log(countOccurrenciesOfEachWord); 
+
+const occurenciesofEachWordToJson = textUtilities.occurenciesofEachWordToJson(countOccurrenciesOfEachWord)
 
 //  5)  l'utente ha inserito l'output url, scrivo un nuovo file con testo dell'originale, più dati dell'analisi; 
-const report = textUtilities.createReportString(fileData, searchWord, charNumber, noSpacesCharNumber, wordNumber, occurrence);
+const report = textUtilities.createReportString(fileData, searchWord, charNumber, noSpacesCharNumber, wordNumber, occurrence, occurenciesofEachWordToJson);
 
 inputOutput.writeReportInFile(outputUrl, report); 
 

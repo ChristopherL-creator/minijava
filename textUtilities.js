@@ -1,17 +1,4 @@
 
-
-function countOccurrenciesOfEachWord(string) {
-    var obj = {};
-    
-    str.split(" ").forEach(function(el, i, arr) {
-      obj[el] = obj[el] ? ++obj[el] : 1;
-    });
-    
-    return obj;
-  }
-  
-  console.log(countOccurrenciesOfEachWord(fileData));
-
 function getCharNumber(string) {
     return string.length;
 } 
@@ -23,9 +10,11 @@ function getCharNumberWithoutSpaces(string){
 
 function cleanString(string) {
     const cleanedString = string.replaceAll("'", ' ') 
-                              .replaceAll('.', '') 
-                              .replaceAll(',', '') 
-                              .replaceAll('!', ''); 
+                                .replaceAll('.', '') 
+                                .replaceAll(',', '') 
+                                .replaceAll('!', '') 
+                                .replaceAll('\n', '') 
+                                .replaceAll('\r', ''); 
     return cleanedString;
 } 
 
@@ -50,7 +39,22 @@ function getOccurrenceOfWordInString(searchWord, string) {
     return occurrence;
 } 
 
-function createReportString(originalText, searchWord, charNumber, noSpacesCharNumber, wordNumber, occurrence) {
+function countOccurrenciesOfEachWord(string) {
+    const obj = {};
+    const wordArray = createArrayOfWordsFromString(string);
+    wordArray.forEach(function(el, i, arr) {
+      obj[el] = obj[el] ? ++obj[el] : 1;
+    });
+    
+    return obj;
+} 
+
+function occurenciesofEachWordToJson(obj) {
+    const jsonEachWordOccurrences = JSON.stringify(obj, null, 2); 
+    return jsonEachWordOccurrences; 
+} 
+
+function createReportString(originalText, searchWord, charNumber, noSpacesCharNumber, wordNumber, occurrence, occurenciesofEachWordToJson) {
     let occurrenceString = '';
     if (occurrence >= 0) {
         occurrenceString = 'parola: ' +  searchWord + '; numero occorrenze: ' + occurrence + (occurrence === 1 ? ' volta.' : ' volte.')
@@ -61,7 +65,8 @@ function createReportString(originalText, searchWord, charNumber, noSpacesCharNu
                         'numero caratteri: ' + charNumber + '\n' + 
                         'numero di caratter spazi esclusi: ' + noSpacesCharNumber + '\n' + 
                         'numero di parole: ' + wordNumber + '\n' + 
-                        occurrenceString;  
+                        occurrenceString + '\n' + 
+                        occurenciesofEachWordToJson; 
 
     return report;
 } 
@@ -70,5 +75,6 @@ exports.getCharNumber = getCharNumber;
 exports.getCharNumberWithoutSpaces = getCharNumberWithoutSpaces; 
 exports.getWordnNumberFromString = getWordnNumberFromString; 
 exports.getOccurrenceOfWordInString = getOccurrenceOfWordInString; 
-exports.createReportString = createReportString; 
+exports.createReportString = createReportString;  
 exports.countOccurrenciesOfEachWord = countOccurrenciesOfEachWord;
+exports.occurenciesofEachWordToJson = occurenciesofEachWordToJson;
