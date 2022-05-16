@@ -8,677 +8,173 @@ numero caratteri: 3851
 numero di caratter spazi esclusi: 3290
 numero di parole: 566
 
-[
-  [
-    "eu",
-    14
-  ],
-  [
-    "vitae",
-    12
-  ],
-  [
-    "felis",
-    11
-  ],
-  [
-    "in",
-    10
-  ],
-  [
-    "et",
-    10
-  ],
-  [
-    "metus",
-    9
-  ],
-  [
-    "augue",
-    8
-  ],
-  [
-    "eget",
-    8
-  ],
-  [
-    "ac",
-    8
-  ],
-  [
-    "vel",
-    8
-  ],
-  [
-    "sed",
-    8
-  ],
-  [
-    "sit",
-    7
-  ],
-  [
-    "amet",
-    7
-  ],
-  [
-    "varius",
-    7
-  ],
-  [
-    "elit",
-    6
-  ],
-  [
-    "Maecenas",
-    6
-  ],
-  [
-    "aliquam",
-    6
-  ],
-  [
-    "neque",
-    6
-  ],
-  [
-    "Sed",
-    6
-  ],
-  [
-    "at",
-    6
-  ],
-  [
-    "dui",
-    6
-  ],
-  [
-    "ullamcorper",
-    6
-  ],
-  [
-    "risus",
-    6
-  ],
-  [
-    "erat",
-    6
-  ],
-  [
-    "id",
-    6
-  ],
-  [
-    "quis",
-    6
-  ],
-  [
-    "ex",
-    6
-  ],
-  [
-    "velit",
-    6
-  ],
-  [
-    "ipsum",
-    5
-  ],
-  [
-    "Donec",
-    5
-  ],
-  [
-    "lobortis",
-    5
-  ],
-  [
-    "vulputate",
-    5
-  ],
-  [
-    "ut",
-    5
-  ],
-  [
-    "semper",
-    5
-  ],
-  [
-    "suscipit",
-    5
-  ],
-  [
-    "convallis",
-    5
-  ],
-  [
-    "pellentesque",
-    5
-  ],
-  [
-    "massa",
-    5
-  ],
-  [
-    "Morbi",
-    4
-  ],
-  [
-    "justo",
-    4
-  ],
-  [
-    "congue",
-    4
-  ],
-  [
-    "tempus",
-    4
-  ],
-  [
-    "tortor",
-    4
-  ],
-  [
-    "a",
-    4
-  ],
-  [
-    "cursus",
-    4
-  ],
-  [
-    "mattis",
-    4
-  ],
-  [
-    "Aliquam",
-    4
-  ],
-  [
-    "ornare",
-    4
-  ],
-  [
-    "tincidunt",
-    4
-  ],
-  [
-    "facilisis",
-    4
-  ],
-  [
-    "scelerisque",
-    4
-  ],
-  [
-    "efficitur",
-    4
-  ],
-  [
-    "Vestibulum",
-    4
-  ],
-  [
-    "eleifend",
-    4
-  ],
-  [
-    "iaculis",
-    4
-  ],
-  [
-    "leo",
-    4
-  ],
-  [
-    "fermentum",
-    4
-  ],
-  [
-    "enim",
-    4
-  ],
-  [
-    "condimentum",
-    4
-  ],
-  [
-    "In",
-    4
-  ],
-  [
-    "arcu",
-    4
-  ],
-  [
-    "dolor",
-    3
-  ],
-  [
-    "consectetur",
-    3
-  ],
-  [
-    "tellus",
-    3
-  ],
-  [
-    "pharetra",
-    3
-  ],
-  [
-    "diam",
-    3
-  ],
-  [
-    "est",
-    3
-  ],
-  [
-    "Fusce",
-    3
-  ],
-  [
-    "purus",
-    3
-  ],
-  [
-    "luctus",
-    3
-  ],
-  [
-    "blandit",
-    3
-  ],
-  [
-    "mi",
-    3
-  ],
-  [
-    "Curabitur",
-    3
-  ],
-  [
-    "bibendum",
-    3
-  ],
-  [
-    "nisi",
-    3
-  ],
-  [
-    "commodo",
-    3
-  ],
-  [
-    "auctor",
-    3
-  ],
-  [
-    "Ut",
-    3
-  ],
-  [
-    "Phasellus",
-    3
-  ],
-  [
-    "ligula",
-    3
-  ],
-  [
-    "lorem",
-    3
-  ],
-  [
-    "sagittis",
-    3
-  ],
-  [
-    "ultricies",
-    3
-  ],
-  [
-    "imperdiet",
-    3
-  ],
-  [
-    "orci",
-    3
-  ],
-  [
-    "ultrices",
-    3
-  ],
-  [
-    "gravida",
-    3
-  ],
-  [
-    "vehicula",
-    3
-  ],
-  [
-    "Aenean",
-    3
-  ],
-  [
-    "venenatis",
-    3
-  ],
-  [
-    "libero",
-    3
-  ],
-  [
-    "malesuada",
-    3
-  ],
-  [
-    "quam",
-    3
-  ],
-  [
-    "sapien",
-    3
-  ],
-  [
-    "nec",
-    3
-  ],
-  [
-    "porttitor",
-    2
-  ],
-  [
-    "eros",
-    2
-  ],
-  [
-    "sollicitudin",
-    2
-  ],
-  [
-    "nisl",
-    2
-  ],
-  [
-    "Quisque",
-    2
-  ],
-  [
-    "nunc",
-    2
-  ],
-  [
-    "non",
-    2
-  ],
-  [
-    "Proin",
-    2
-  ],
-  [
-    "placerat",
-    2
-  ],
-  [
-    "Etiam",
-    2
-  ],
-  [
-    "dictum",
-    2
-  ],
-  [
-    "Mauris",
-    2
-  ],
-  [
-    "fringilla",
-    2
-  ],
-  [
-    "aliquet",
-    2
-  ],
-  [
-    "tempor",
-    2
-  ],
-  [
-    "posuere",
-    2
-  ],
-  [
-    "lacus",
-    2
-  ],
-  [
-    "interdum",
-    2
-  ],
-  [
-    "Pellentesque",
-    2
-  ],
-  [
-    "hendrerit",
-    2
-  ],
-  [
-    "feugiat",
-    2
-  ],
-  [
-    "Cras",
-    2
-  ],
-  [
-    "lectus",
-    2
-  ],
-  [
-    "Nulla",
-    2
-  ],
-  [
-    "sem",
-    2
-  ],
-  [
-    "odio",
-    2
-  ],
-  [
-    "nulla",
-    2
-  ],
-  [
-    "hac",
-    2
-  ],
-  [
-    "habitasse",
-    2
-  ],
-  [
-    "platea",
-    2
-  ],
-  [
-    "dictumst",
-    2
-  ],
-  [
-    "Nam",
-    2
-  ],
-  [
-    "euismod",
-    2
-  ],
-  [
-    "lacinia",
-    2
-  ],
-  [
-    "ante",
-    2
-  ],
-  [
-    "dapibus",
-    2
-  ],
-  [
-    "consequat",
-    2
-  ],
-  [
-    "maximus",
-    2
-  ],
-  [
-    "Lorem",
-    1
-  ],
-  [
-    "adipiscing",
-    1
-  ],
-  [
-    "pulvinar",
-    1
-  ],
-  [
-    "molestie",
-    1
-  ],
-  [
-    "elementum",
-    1
-  ],
-  [
-    "porta",
-    1
-  ],
-  [
-    "turpis",
-    1
-  ],
-  [
-    "mollis",
-    1
-  ],
-  [
-    "Nullam",
-    1
-  ],
-  [
-    "faucibus",
-    1
-  ],
-  [
-    "Praesent",
-    1
-  ],
-  [
-    "volutpat",
-    1
-  ],
-  [
-    "urna",
-    1
-  ],
-  [
-    "nibh",
-    1
-  ],
-  [
-    "Orci",
-    1
-  ],
-  [
-    "natoque",
-    1
-  ],
-  [
-    "penatibus",
-    1
-  ],
-  [
-    "magnis",
-    1
-  ],
-  [
-    "dis",
-    1
-  ],
-  [
-    "parturient",
-    1
-  ],
-  [
-    "montes",
-    1
-  ],
-  [
-    "nascetur",
-    1
-  ],
-  [
-    "ridiculus",
-    1
-  ],
-  [
-    "mus",
-    1
-  ],
-  [
-    "sodales",
-    1
-  ],
-  [
-    "finibus",
-    1
-  ],
-  [
-    "laoreet",
-    1
-  ],
-  [
-    "accumsan",
-    1
-  ],
-  [
-    "pretium",
-    1
-  ],
-  [
-    "viverra",
-    1
-  ],
-  [
-    "mauris",
-    1
-  ],
-  [
-    "dignissim",
-    1
-  ],
-  [
-    "Integer",
-    1
-  ],
-  [
-    "Duis",
-    1
-  ],
-  [
-    "rutrum",
-    1
-  ]
-]
+{
+  "Lorem": 1,
+  "ipsum": 5,
+  "dolor": 3,
+  "sit": 7,
+  "amet": 7,
+  "consectetur": 3,
+  "adipiscing": 1,
+  "elit": 6,
+  "Donec": 5,
+  "in": 10,
+  "tellus": 3,
+  "vitae": 12,
+  "pharetra": 3,
+  "Maecenas": 6,
+  "porttitor": 2,
+  "lobortis": 5,
+  "Morbi": 4,
+  "aliquam": 6,
+  "justo": 4,
+  "pulvinar": 1,
+  "molestie": 1,
+  "diam": 3,
+  "metus": 9,
+  "vulputate": 5,
+  "est": 3,
+  "elementum": 1,
+  "eros": 2,
+  "felis": 11,
+  "ut": 5,
+  "neque": 6,
+  "Fusce": 3,
+  "congue": 4,
+  "purus": 3,
+  "tempus": 4,
+  "luctus": 3,
+  "blandit": 3,
+  "augue": 8,
+  "tortor": 4,
+  "et": 10,
+  "porta": 1,
+  "mi": 3,
+  "Curabitur": 3,
+  "semper": 5,
+  "sollicitudin": 2,
+  "nisl": 2,
+  "a": 4,
+  "suscipit": 5,
+  "Quisque": 2,
+  "eu": 14,
+  "bibendum": 3,
+  "Sed": 6,
+  "turpis": 1,
+  "cursus": 4,
+  "mattis": 4,
+  "Aliquam": 4,
+  "ornare": 4,
+  "nunc": 2,
+  "varius": 7,
+  "tincidunt": 4,
+  "nisi": 3,
+  "commodo": 3,
+  "at": 6,
+  "facilisis": 4,
+  "eget": 8,
+  "auctor": 3,
+  "non": 2,
+  "Ut": 3,
+  "ac": 8,
+  "dui": 6,
+  "Proin": 2,
+  "Phasellus": 3,
+  "ullamcorper": 6,
+  "risus": 6,
+  "erat": 6,
+  "id": 6,
+  "ligula": 3,
+  "scelerisque": 4,
+  "vel": 8,
+  "quis": 6,
+  "lorem": 3,
+  "placerat": 2,
+  "efficitur": 4,
+  "Vestibulum": 4,
+  "sagittis": 3,
+  "Etiam": 2,
+  "mollis": 1,
+  "dictum": 2,
+  "Mauris": 2,
+  "sed": 8,
+  "ex": 6,
+  "eleifend": 4,
+  "ultricies": 3,
+  "velit": 6,
+  "imperdiet": 3,
+  "iaculis": 4,
+  "fringilla": 2,
+  "Nullam": 1,
+  "convallis": 5,
+  "orci": 3,
+  "aliquet": 2,
+  "ultrices": 3,
+  "pellentesque": 5,
+  "faucibus": 1,
+  "gravida": 3,
+  "tempor": 2,
+  "Praesent": 1,
+  "vehicula": 3,
+  "Aenean": 3,
+  "posuere": 2,
+  "leo": 4,
+  "lacus": 2,
+  "fermentum": 4,
+  "interdum": 2,
+  "enim": 4,
+  "volutpat": 1,
+  "Pellentesque": 2,
+  "hendrerit": 2,
+  "feugiat": 2,
+  "urna": 1,
+  "nibh": 1,
+  "venenatis": 3,
+  "Orci": 1,
+  "natoque": 1,
+  "penatibus": 1,
+  "magnis": 1,
+  "dis": 1,
+  "parturient": 1,
+  "montes": 1,
+  "nascetur": 1,
+  "ridiculus": 1,
+  "mus": 1,
+  "Cras": 2,
+  "lectus": 2,
+  "Nulla": 2,
+  "sem": 2,
+  "libero": 3,
+  "malesuada": 3,
+  "odio": 2,
+  "condimentum": 4,
+  "In": 4,
+  "quam": 3,
+  "nulla": 2,
+  "hac": 2,
+  "habitasse": 2,
+  "platea": 2,
+  "dictumst": 2,
+  "massa": 5,
+  "sodales": 1,
+  "finibus": 1,
+  "Nam": 2,
+  "sapien": 3,
+  "laoreet": 1,
+  "accumsan": 1,
+  "euismod": 2,
+  "arcu": 4,
+  "lacinia": 2,
+  "nec": 3,
+  "pretium": 1,
+  "ante": 2,
+  "viverra": 1,
+  "dapibus": 2,
+  "consequat": 2,
+  "mauris": 1,
+  "maximus": 2,
+  "dignissim": 1,
+  "Integer": 1,
+  "Duis": 1,
+  "rutrum": 1
+}
