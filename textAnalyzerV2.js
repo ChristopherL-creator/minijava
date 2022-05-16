@@ -43,12 +43,17 @@ if (occurrence >= 0) {
 } 
 
 const countOccurrenciesOfEachWord = textUtilities.countOccurrenciesOfEachWord(fileData); 
-console.log(countOccurrenciesOfEachWord); 
+// console.log(countOccurrenciesOfEachWord); 
 
-const occurenciesofEachWordToJson = textUtilities.occurenciesofEachWordToJson(countOccurrenciesOfEachWord)
+const frequencyData = textUtilities.createFrequencyData (fileData)
+
+const sortOccurencesByMostRecurring = textUtilities.sortOccurencesByMostRecurring(countOccurrenciesOfEachWord);
+
+const occurenciesofEachWordToJson = textUtilities.occurenciesofEachWordToJson(sortOccurencesByMostRecurring); 
+console.log(occurenciesofEachWordToJson); 
 
 //  5)  l'utente ha inserito l'output url, scrivo un nuovo file con testo dell'originale, più dati dell'analisi; 
-const report = textUtilities.createReportString(fileData, searchWord, charNumber, noSpacesCharNumber, wordNumber, occurrence, occurenciesofEachWordToJson);
+const report = textUtilities.createReportString(fileData, searchWord, charNumber, noSpacesCharNumber, wordNumber, occurrence, frequencyData, occurenciesofEachWordToJson);
 
 inputOutput.writeReportInFile(outputUrl, report); 
 

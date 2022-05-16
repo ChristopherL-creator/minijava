@@ -49,12 +49,66 @@ function countOccurrenciesOfEachWord(string) {
     return obj;
 } 
 
-function occurenciesofEachWordToJson(obj) {
-    const jsonEachWordOccurrences = JSON.stringify(obj, null, 2); 
-    return jsonEachWordOccurrences; 
+// function occurrenciesOfEachWordToPercentage(obj) {
+//     let total = 0;
+
+//     for (var i in obj) { // we find the total here
+//         total += parseInt(myObj[i], 10); 
+//     }
+
+//     for (var i in myObj) { // we do the conversion here
+//         myObj[i] = (myObj[i] / total * 100) + "%";
+//         res.innerHTML += "<br>" + i + ": " + myObj[i]; // html output
+//     }
+// } 
+
+function fromFrequencyObjToArray (obj) {
+        const frequencyArray = []; 
+//   funzione for in:
+    for (const property in obj) { 
+        if (Object.hasOwnProperty.call(obj, property)) { 
+           const values = obj[property]; 
+           const object = {word: property, frequency: values}; 
+           frequencyArray.push(object);
+        }
+    } 
+
+    return frequencyArray;
 } 
 
-function createReportString(originalText, searchWord, charNumber, noSpacesCharNumber, wordNumber, occurrence, occurenciesofEachWordToJson) {
+function createFrequencyData(string) {
+    const freqObj = wordsFrequency(string); 
+    const freqArray = fromFrequencyObjToArray(freqObj); 
+    freqArray.sort(compareFrequency); 
+
+    let frequencyData = 'Frequenza parole \n';
+
+    for (const freq of freqArray) {
+        frequencyData = frequencyData + freq.Array.word + ': ' + freq.frequency + '\n';
+    } 
+
+    return frequencyData;
+} 
+
+function compareFrequency(freq1, freq2) {
+    return freq2.frequency - freq1.frequency;
+} 
+
+// function sortOccurencesByMostRecurring(frequencyArray) { 
+      
+//     let entries = Object.entries(frequencyArray);
+    
+//     let sorted = entries.sort((a, b) => b[1] - a[1]);
+    
+//     return sorted;
+// }
+
+// function occurenciesofEachWordToJson(sorted) {
+//     const jsonEachWordOccurrences = JSON.stringify(sorted, null, 2); 
+//     return jsonEachWordOccurrences; 
+// } 
+
+function createReportString(originalText, searchWord, charNumber, noSpacesCharNumber, wordNumber, occurrence, jsonEachWordOccurrences) {
     let occurrenceString = '';
     if (occurrence >= 0) {
         occurrenceString = 'parola: ' +  searchWord + '; numero occorrenze: ' + occurrence + (occurrence === 1 ? ' volta.' : ' volte.')
@@ -66,7 +120,8 @@ function createReportString(originalText, searchWord, charNumber, noSpacesCharNu
                         'numero di caratter spazi esclusi: ' + noSpacesCharNumber + '\n' + 
                         'numero di parole: ' + wordNumber + '\n' + 
                         occurrenceString + '\n' + 
-                        occurenciesofEachWordToJson; 
+                        createFrequencyData + '\n' +
+                        jsonEachWordOccurrences; 
 
     return report;
 } 
@@ -76,5 +131,6 @@ exports.getCharNumberWithoutSpaces = getCharNumberWithoutSpaces;
 exports.getWordnNumberFromString = getWordnNumberFromString; 
 exports.getOccurrenceOfWordInString = getOccurrenceOfWordInString; 
 exports.createReportString = createReportString;  
-exports.countOccurrenciesOfEachWord = countOccurrenciesOfEachWord;
+exports.countOccurrenciesOfEachWord = countOccurrenciesOfEachWord; 
+exports.sortOccurencesByMostRecurring = sortOccurencesByMostRecurring;
 exports.occurenciesofEachWordToJson = occurenciesofEachWordToJson;
